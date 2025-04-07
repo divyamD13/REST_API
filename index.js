@@ -9,8 +9,7 @@ app.use(express.urlencoded({extended:false}));
 app.get("/api/users",(req,res)=>{
     res.setHeader("myName", "Divyam");
     return res.json(users);
-}
-    
+} 
 );
 
 app.get("/users",(req,res)=>{
@@ -21,8 +20,9 @@ ${users.map((user)=>`<li>${user.first_name}</li>`
 res.send(html);
 });
 
+
+
 app.route("/api/users/:id").get((req,res)=>{
-    
     const id=Number(req.params.id);
     const user=users.find((user)=>user.id===id);
     if(!user){
@@ -30,7 +30,7 @@ app.route("/api/users/:id").get((req,res)=>{
     }
     return  res.send(user);
 }).put((req,res)=>{
-    return res.json({status:'pending'});
+    return res.json({status:'pending'})
 }).patch((req,res)=>{
     return res.json({status:'pending'});
 }).delete((req,res)=>{
