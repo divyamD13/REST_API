@@ -78,10 +78,12 @@ app.route("/api/users/:id").get(async (req, res) => {
     return res.send(user);
 }).put((req, res) => {
     return res.json({ status: 'pending' })
-}).patch((req, res) => {
-    return res.json({ status: 'pending' });
-}).delete((req, res) => {
-    return res.json({ status: 'pending' });
+}).patch(async (req, res) => {
+    await User.findByIdAndUpdate(req.params.id, {last_name:"Jha"})
+    return res.json({ status: 'success' });
+}).delete(async (req, res) => {
+    await User.findByIdAndDelete(req.params.id);
+    return res.json({ status: 'success' });
 })
 // app.get("/api/users/:id",(req,res)=>{
 //     const id=Number(req.params.id);
