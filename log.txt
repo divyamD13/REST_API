@@ -1,0 +1,12 @@
+
+ function now() { [native code] }:::1 GET:/users
+
+ function now() { [native code] }:::1 GET:/api/users
+
+ function now() { [native code] }:::1 GET:/api/users/67f4b19c7732b5131eb0240f
+
+ function now() { [native code] }:::1 POST:/api/users
+
+ function now() { [native code] }:::1 GET:/api/users/67f4c87906186d6a938468ba%0A
+
+ function now() { [native code] }:::1 GET:/api/users
