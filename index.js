@@ -6,7 +6,6 @@ const userRouter = require("./routes/user");
 const { logReqRes } = require("./middlewares");
 const PORT = 8000;
 
-
 const app = express();
 
 //Mongoose Connnection
