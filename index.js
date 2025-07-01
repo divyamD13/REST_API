@@ -8,6 +8,7 @@ const PORT = 8000;
 
 const app = express();
 
+
 //Mongoose Connnection
 connectMongoDB('mongodb://127.0.0.1:27017/yt_app').then(() => {
     console.log("Connected to MongoDB");
